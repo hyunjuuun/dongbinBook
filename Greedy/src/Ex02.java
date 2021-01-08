@@ -18,23 +18,25 @@ public class Ex02 {
 		int k = sc.nextInt();
 
 		int arr[] = new int[n];
-		for (int i = 0; i < n; i++)
-			arr[i] = sc.nextInt();
 
-		Arrays.sort(arr); // 입력 받은 수들 정렬하기
+		for (int i = 0; i < n; i++) {
+			arr[i] = sc.nextInt();
+		}
+
+		Arrays.sort(arr);
 
 		int first = arr[n - 1];
 		int second = arr[n - 2];
-		int sum = 0;
 
-		int count = (m/k+1) + m%(k+1);
-		
-		sum += first*count;
-		sum += second*(m-count);
-		
+		// 가장 큰 수가 더해지는 횟수
+		int count2 = m / k;
+		int count1 = m - count2;
+
+		// 두번째로 큰 수가 더해지는 횟수
+
+		int sum = first * count1 + second * count2;
+
 		System.out.println(sum);
-		
-				
 
 		sc.close();
 
