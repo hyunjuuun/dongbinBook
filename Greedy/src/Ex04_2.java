@@ -25,6 +25,8 @@ public class Ex04_2 {
         // 마지막으로 남은 수에 대하여 1씩 빼기
         result += (n - 1);
         System.out.println(result);
-    }
 
+        sc.close();
+    }
+    
 }
